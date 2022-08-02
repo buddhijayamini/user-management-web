@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\API\CompanyController;
+use App\Http\Controllers\API\EmployeeController;
+use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,7 +16,26 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('test',function () {
+    dd("test");
+});
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+/* Authentication */
+Route::group(['middleware' => ['cors'],'prefix' => 'v1/auth'], function () {
+    Route::post('login', [UserController::class, 'login'])->name('login');
+});
+
+Route::group([
+    'middleware' => ['auth:api'],
+    'prefix' => 'v1'
+], function () {
+    Route::apiResource('/company', CompanyController::class)->names('company');
+
+    Route::apiResource('/employee', EmployeeController::class)->names('employee');
+
+    Route::post('/logout', [UserController::class,'logOut'])->name('logout');
+});
+
+Route::fallback(function(){
+    return response()->json(['message' => 'Resource not found.'], 404);
 });

@@ -19,6 +19,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/home';
 
+    // /** @var string $apiNamespace */
+    // protected $apiNamespace ='App\Http\Controllers\Api';
+
     /**
      * The controller namespace for the application.
      *
@@ -60,4 +63,27 @@ class RouteServiceProvider extends ServiceProvider
             return Limit::perMinute(60);
         });
     }
+
+    protected function mapApiV1Routes()
+        {
+            Route::prefix('api/v1')
+                ->middleware('api')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/api.php'));
+        }
+
+        /**
+ * Define the routes for the application.
+ *
+ * @return void
+ */
+public function map()
+{
+    $this->mapApiRoutes();
+
+    $this->mapWebRoutes();
+
+    // custom API routes
+    $this->mapApiV1Routes();
+}
 }
