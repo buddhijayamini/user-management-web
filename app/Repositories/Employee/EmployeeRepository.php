@@ -60,7 +60,18 @@ class EmployeeRepository implements EmployeeInterface
 
     public function store(array $addDetails) : object
     {
-        return $this->model->create($addDetails);
+        $empData = array(
+            'first_name' => $addDetails['first_name'],
+            'last_name' => $addDetails['last_name'],
+            'email' => $addDetails['email'],
+            'phone' => $addDetails['phone'],
+            'company_id' => $addDetails['company_id'],
+            'user_id' => $addDetails['user_id'],
+            'profile_image' => $addDetails['profile_image'],
+            'user_role' => $addDetails['user_role'],
+            'status' => $addDetails['status']
+        );
+        return $this->model->create($empData);
     }
 
     public function update(int $id, array $newDetails) : bool

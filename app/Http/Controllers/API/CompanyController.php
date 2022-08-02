@@ -151,13 +151,13 @@ class CompanyController extends Controller
                 if($data){
                     return new SuccessResponse(
                         [
-                            'message' => 'Company deleted Successfully with Comments.'
+                            'message' => 'Company deleted Successfully.'
                         ],
                     );
                 }else{
                     return new ErrorResponse(
                         [
-                            'message' => 'Company can not be Deleted with Comments.'
+                            'message' => 'Company can not be Deleted.'
                         ],
                     );
                 }

@@ -4,7 +4,6 @@ namespace App\Repositories\User;
 
 use App\Models\User;
 use App\Repositories\User\UserInterface;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 /**
@@ -16,11 +15,9 @@ class UserRepository implements UserInterface
     {
         $user = new User();
         $user->name = $data['name'];
-        $user->username = $data['email'];
         $user->email = $data['email'];
         $user->password = Hash::make($data['password']);
         $user->type = 2;
-        $user->status = 1;
         $user->save();
 
         $token = $user->createToken('user_token')->accessToken;

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Classes\ApiCatchErrors;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\EmployeeRequest;
+use App\Http\Requests\EmployeeUpdateRequest;
 use App\Http\Resources\Common\ErrorResponse;
 use App\Http\Resources\Common\PaginationResource;
 use App\Http\Resources\Common\SuccessResponse;
@@ -48,9 +49,12 @@ class EmployeeController extends Controller
         DB::beginTransaction();
         try {
             $validatedData = $request->validated();
-            $this->userInterface->store($validatedData);
 
-            $validatedData['user_id'] = Auth::user()->id;
+            $validatedData['name'] =  $validatedData['first_name']; //dd($validatedData);
+            $user = $this->userInterface->store($validatedData);
+
+            $validatedData['user_role'] = '';
+            $validatedData['user_id'] = $user->user->id;
             if(Auth::user()->id == 1){
                 $validatedData['status'] = 1;
             }else{
@@ -64,7 +68,7 @@ class EmployeeController extends Controller
                 $path = $file->storeAs('profiles', $filename);
                 $validatedData['profile_image']=json_encode($path);
             }
-            
+
             $data = $this->employeeInterface->store($validatedData);
             DB::commit();
 
@@ -101,7 +105,7 @@ class EmployeeController extends Controller
      * Update the specified resource in storage.
      *
      */
-    public function update(EmployeeRequest $request, int $id)
+    public function update(EmployeeUpdateRequest $request, int $id)
     {
         DB::beginTransaction();
         try{
@@ -144,13 +148,13 @@ class EmployeeController extends Controller
                 if($data){
                     return new SuccessResponse(
                         [
-                            'message' => 'Employee deleted Successfully with Comments.'
+                            'message' => 'Employee deleted Successfully.'
                         ],
                     );
                 }else{
                     return new ErrorResponse(
                         [
-                            'message' => 'Employee can not be Deleted with Comments.'
+                            'message' => 'Employee can not be Deleted.'
                         ],
                     );
                 }
