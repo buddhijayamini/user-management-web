@@ -50,7 +50,7 @@ class EmployeeController extends Controller
         try {
             $validatedData = $request->validated();
 
-            $validatedData['name'] =  $validatedData['first_name']; //dd($validatedData);
+            $validatedData['name'] =  $validatedData['first_name']; 
             $user = $this->userInterface->store($validatedData);
 
             $validatedData['user_role'] = '';
