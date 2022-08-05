@@ -35,7 +35,7 @@ CREATE TABLE `companies` (
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `companies_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `companies` (
 
 LOCK TABLES `companies` WRITE;
 /*!40000 ALTER TABLE `companies` DISABLE KEYS */;
-INSERT INTO `companies` VALUES (1,'ABC Company','abc@wearedesigners.net',NULL,NULL,NULL,NULL,'2022-08-05 09:25:19',NULL,NULL);
+INSERT INTO `companies` VALUES (1,'ABC Company','abc@wearedesigners.net',NULL,NULL,NULL,NULL,'2022-08-05 09:25:19',NULL,NULL),(2,'WWW','www@gmail.com','0714562584','\"logo\\/WWW.png\"','\"covers\\/WWW.png\"','www.abc.com','2022-08-05 04:11:23','2022-08-05 04:11:23',NULL);
 /*!40000 ALTER TABLE `companies` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -75,7 +75,7 @@ CREATE TABLE `employees` (
   KEY `employees_company_id_foreign` (`company_id`),
   CONSTRAINT `employees_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE NO ACTION,
   CONSTRAINT `employees_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -84,7 +84,7 @@ CREATE TABLE `employees` (
 
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-INSERT INTO `employees` VALUES (1,1,1,'Admin','Admin','Admin','admin@wearedesigners.net',NULL,NULL,1,'2022-08-05 09:25:19',NULL,NULL),(2,2,1,'Nimal','Perera','Media Manager','nimal@wearedesigners.net',NULL,NULL,1,'2022-08-05 09:25:19',NULL,NULL);
+INSERT INTO `employees` VALUES (1,1,1,'Admin','Admin','Admin','admin@wearedesigners.net',NULL,NULL,1,'2022-08-05 09:25:19',NULL,NULL),(2,2,1,'Nimal','Perera','Media Manager','nimal@wearedesigners.net',NULL,NULL,1,'2022-08-05 09:25:19',NULL,NULL),(3,7,2,'Sunil','Perera','','sunil@gmail.com','071546982','\"profiles\\/7.png\"',0,'2022-08-05 04:15:18','2022-08-05 04:15:18',NULL);
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -170,6 +170,7 @@ CREATE TABLE `oauth_access_tokens` (
 
 LOCK TABLES `oauth_access_tokens` WRITE;
 /*!40000 ALTER TABLE `oauth_access_tokens` DISABLE KEYS */;
+INSERT INTO `oauth_access_tokens` VALUES ('006ed137bcecdf99cc0b8c5c73f027a28893a6cbf5db250e665390a4eab08725f46911d450ddcf8e',7,1,'user_token','[]',0,'2022-08-04 22:45:18','2022-08-04 22:45:18','2023-08-05 04:15:18'),('9995797f97f531ef8e5cc49684633392ec85bffe5e2aaf4cec80a6fa02a0288fdff4e685efd1485e',1,1,'user_token','[]',0,'2022-08-04 22:41:07','2022-08-04 22:41:07','2023-08-05 04:11:07');
 /*!40000 ALTER TABLE `oauth_access_tokens` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -330,7 +331,7 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -339,7 +340,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','admin@wearedesigners.net',NULL,'$2y$10$6XTOqcUEpKsGhGiJsAneaOvkyDuhT/Sh8m/i7PLp19ihK0WRaOdc2',1,NULL,NULL,NULL),(2,'nimal','nimal@wearedesigners.net',NULL,'$2y$10$IHwBQU6KtXDf319Ss9/Xk..y8ykRHshv2mNnAgdBiPW1xozSNcpEW',2,NULL,NULL,NULL);
+INSERT INTO `users` VALUES (1,'admin','admin@wearedesigners.net',NULL,'$2y$10$6XTOqcUEpKsGhGiJsAneaOvkyDuhT/Sh8m/i7PLp19ihK0WRaOdc2',1,NULL,NULL,NULL),(2,'nimal','nimal@wearedesigners.net',NULL,'$2y$10$IHwBQU6KtXDf319Ss9/Xk..y8ykRHshv2mNnAgdBiPW1xozSNcpEW',2,NULL,NULL,NULL),(7,'Sunil','sunil@gmail.com',NULL,'$2y$10$4qdwISb9b7d5VdLO/bH/i.v8A.C4n7Lqs/GDviLw6KwRFd6rrN.Oa',2,NULL,'2022-08-04 22:45:18','2022-08-04 22:45:18');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -352,4 +353,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-05  9:30:30
+-- Dump completed on 2022-08-05 10:07:56
