@@ -23,6 +23,7 @@ Route::get('test',function () {
 /* Authentication */
 Route::group(['middleware' => ['cors'],'prefix' => 'v1/auth'], function () {
     Route::post('login', [UserController::class, 'login'])->name('login');
+    Route::post('/register', [EmployeeController::class,'store'])->name('register');
 });
 
 Route::group([

@@ -55,7 +55,7 @@ class EmployeeController extends Controller
 
             $validatedData['user_role'] = '';
             $validatedData['user_id'] = $user->user->id;
-            if(Auth::user()->id == 1){
+            if(Auth::user() != null){
                 $validatedData['status'] = 1;
             }else{
                 $validatedData['status'] = 0;

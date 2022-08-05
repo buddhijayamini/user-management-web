@@ -1516,6 +1516,191 @@
 					"body": "{\n    \"massage\": \"logout successfully\"\n}"
 				}
 			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Sunil",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Perera",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sunil@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "071546982",
+							"type": "text"
+						},
+						{
+							"key": "profile_image",
+							"type": "file",
+							"src": "/F:/Best Nature Full HD Wallpapers [1920x1080]/Wallpaper 1080 (7).jpg"
+						},
+						{
+							"key": "company_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "sunil@123",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "sunil@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Sunil",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Perera",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "sunil@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "071546982",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "/F:/Best Nature Full HD Wallpapers [1920x1080]/Wallpaper 1080 (7).jpg"
+								},
+								{
+									"key": "company_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "sunil@123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "sunil@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Aug 2022 04:15:18 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Aug 2022 04:15:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"company\": {\n            \"id\": 2,\n            \"name\": \"WWW\",\n            \"email\": \"www@gmail.com\",\n            \"telephone\": \"0714562584\",\n            \"logo\": \"\\\"logo\\\\/WWW.png\\\"\",\n            \"cover_images\": \"\\\"covers\\\\/WWW.png\\\"\",\n            \"website\": \"www.abc.com\"\n        },\n        \"first_name\": \"Sunil\",\n        \"last_name\": \"Perera\",\n        \"email\": \"sunil@gmail.com\",\n        \"user_role\": \"\",\n        \"phone\": \"071546982\",\n        \"profile_image\": \"\\\"profiles\\\\/7.png\\\"\"\n    }\n}"
+				}
+			]
 		}
 	]
 }
