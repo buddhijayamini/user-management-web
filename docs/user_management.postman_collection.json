@@ -1,0 +1,1521 @@
+{
+	"info": {
+		"_postman_id": "4290d5cf-269d-48bd-bc82-6fdcac4633b7",
+		"name": "user_management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16137782"
+	},
+	"item": [
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "view",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/company",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"company"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "view",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/company",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"company"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 09:04:06 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 09:04:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"ABC Company\",\n            \"email\": \"abc@wearedesigners.net\",\n            \"telephone\": null,\n            \"logo\": null,\n            \"cover_images\": null,\n            \"website\": null\n        }\n    ],\n    \"pagination\": {\n        \"links\": {\n            \"first\": \"http://localhost:8000/api/v1/company?page=1\",\n            \"last\": \"http://localhost:8000/api/v1/company?page=1\",\n            \"prev\": null,\n            \"next\": null\n        },\n        \"meta\": {\n            \"current_page\": 1,\n            \"last_page\": 1,\n            \"path\": \"http://localhost:8000/api/v1/company\",\n            \"per_page\": 10,\n            \"total\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "WWW",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "www@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "telephone",
+									"value": "0714562584",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/F:/Best Nature Full HD Wallpapers [1920x1080]/Wallpaper 1080 (2).jpg"
+								},
+								{
+									"key": "cover_images",
+									"type": "file",
+									"src": "/F:/Best Nature Full HD Wallpapers [1920x1080]/Wallpaper 1080 (5).jpg"
+								},
+								{
+									"key": "website",
+									"value": "www.abc.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/company",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"company"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "WWW",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "www@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "telephone",
+											"value": "0714562584",
+											"type": "text"
+										},
+										{
+											"key": "logo",
+											"type": "file",
+											"src": "/F:/Best Nature Full HD Wallpapers [1920x1080]/Wallpaper 1080 (2).jpg"
+										},
+										{
+											"key": "cover_images",
+											"type": "file",
+											"src": "/F:/Best Nature Full HD Wallpapers [1920x1080]/Wallpaper 1080 (5).jpg"
+										},
+										{
+											"key": "website",
+											"value": "www.abc.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/company",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"company"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 11:24:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 11:24:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"WWW\",\n        \"email\": \"www@gmail.com\",\n        \"telephone\": \"0714562584\",\n        \"logo\": \"\\\"logo\\\\/WWW.png\\\"\",\n        \"cover_images\": \"\\\"covers\\\\/WWW.png\\\"\",\n        \"website\": \"www.abc.com\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "SSS",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/company/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"company",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "SSS",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/company/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"company",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 16:11:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 16:11:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"SSS\",\n        \"email\": \"www@gmail.com\",\n        \"telephone\": \"0714562584\",\n        \"logo\": \"\\\"logo\\\\/WWW.png\\\"\",\n        \"cover_images\": \"\\\"covers\\\\/WWW.png\\\"\",\n        \"website\": \"www.abc.com\"\n    },\n    \"message\": \"Company updated Successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/company/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"company",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/company/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"company",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 17:26:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 17:26:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Company deleted Successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "show by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/company/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"company",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "show by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/company/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"company",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 04 Aug 2022 08:44:00 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 04 Aug 2022 08:44:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"ABC Company\",\n        \"email\": \"abc@wearedesigners.net\",\n        \"telephone\": null,\n        \"logo\": null,\n        \"cover_images\": null,\n        \"website\": null\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "view",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/employee",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "view",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/employee",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 16:21:06 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 16:21:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"company\": {\n                \"id\": 1,\n                \"name\": \"ABC Company\",\n                \"email\": \"abc@wearedesigners.net\",\n                \"telephone\": null,\n                \"logo\": null,\n                \"cover_images\": null,\n                \"website\": null\n            },\n            \"first name\": \"Admin\",\n            \"last name\": \"Admin\",\n            \"email\": \"admin@wearedesigners.net\",\n            \"phone\": null,\n            \"profile_image\": null\n        },\n        {\n            \"id\": 2,\n            \"company\": {\n                \"id\": 1,\n                \"name\": \"ABC Company\",\n                \"email\": \"abc@wearedesigners.net\",\n                \"telephone\": null,\n                \"logo\": null,\n                \"cover_images\": null,\n                \"website\": null\n            },\n            \"first name\": \"Nimal\",\n            \"last name\": \"Perera\",\n            \"email\": \"nimal@wearedesigners.net\",\n            \"phone\": null,\n            \"profile_image\": null\n        }\n    ],\n    \"pagination\": {\n        \"links\": {\n            \"first\": \"http://localhost:8000/api/v1/employee?page=1\",\n            \"last\": \"http://localhost:8000/api/v1/employee?page=1\",\n            \"prev\": null,\n            \"next\": null\n        },\n        \"meta\": {\n            \"current_page\": 1,\n            \"last_page\": 1,\n            \"path\": \"http://localhost:8000/api/v1/employee\",\n            \"per_page\": 10,\n            \"total\": 2\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Amila",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Gamage",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "amila@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0754862359",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "/F:/Best Nature Full HD Wallpapers [1920x1080]/Wallpaper 1080 (9).jpg"
+								},
+								{
+									"key": "company_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "amila@123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "amila@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/employee",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "Amila",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "Gamage",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "amila@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "0754862359",
+											"type": "text"
+										},
+										{
+											"key": "profile_image",
+											"type": "file",
+											"src": "/F:/Best Nature Full HD Wallpapers [1920x1080]/Wallpaper 1080 (9).jpg"
+										},
+										{
+											"key": "company_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "amila@123",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "amila@123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/employee",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 16:58:11 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 16:58:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"company\": {\n            \"id\": 1,\n            \"name\": \"ABC Company\",\n            \"email\": \"abc@wearedesigners.net\",\n            \"telephone\": null,\n            \"logo\": null,\n            \"cover_images\": null,\n            \"website\": null\n        },\n        \"first name\": \"Amila\",\n        \"last name\": \"Gamage\",\n        \"email\": \"amila@gmail.com\",\n        \"phone\": \"0754862359\",\n        \"profile_image\": \"\\\"profiles\\\\/4.png\\\"\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "Sunil",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Dayan",
+									"type": "text"
+								},
+								{
+									"key": "company_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "user_role",
+									"value": "accountant",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/employee/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "first_name",
+											"value": "Sunil",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "Dayan",
+											"type": "text"
+										},
+										{
+											"key": "company_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/employee/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employee",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 17:23:09 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 17:23:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"company\": {\n            \"id\": 1,\n            \"name\": \"ABC Company\",\n            \"email\": \"abc@wearedesigners.net\",\n            \"telephone\": null,\n            \"logo\": null,\n            \"cover_images\": null,\n            \"website\": null\n        },\n        \"first name\": \"Sunil\",\n        \"last name\": \"Dayan\",\n        \"email\": \"amila@gmail.com\",\n        \"phone\": \"0754862359\",\n        \"profile_image\": \"\\\"profiles\\\\/4.png\\\"\"\n    },\n    \"message\": \"Employee updated Successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/employee/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/employee/5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employee",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 17:25:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Aug 2022 17:25:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Employee deleted Successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "show by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/employee/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "show by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/employee/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employee",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Aug 2022 03:52:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Aug 2022 03:52:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"company\": {\n            \"id\": 1,\n            \"name\": \"ABC Company\",\n            \"email\": \"abc@wearedesigners.net\",\n            \"telephone\": null,\n            \"logo\": null,\n            \"cover_images\": null,\n            \"website\": null\n        },\n        \"first_name\": \"Admin\",\n        \"last_name\": \"Admin\",\n        \"email\": \"admin@wearedesigners.net\",\n        \"user_role\": \"Admin\",\n        \"phone\": null,\n        \"profile_image\": null\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin@wearedesigners.net",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "654321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@wearedesigners.net",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "654321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 08:48:02 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 08:48:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGVmMWVkMjZlNzkwMzA2ZGUzZmY1ZDJlOTIxYjk5NzE0OWI5ZTllMmEyMDE0Y2I1ODJlMjc0MjZiNDFmMDBkOTM1MTgwOWNhNzQ4Yjc2YjciLCJpYXQiOjE2NTk0MzAwODIuMzU4MTQsIm5iZiI6MTY1OTQzMDA4Mi4zNTgxNDMsImV4cCI6MTY5MDk2NjA4Mi4zNDk0OTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.IhXu4oIrehKwLejy19l-uiJ16pawYCsqnu6BbkfydXFeap-5oDNWbpg-PWIdokxXIWq_5f2tpvnyj8oWckFsmZ5vVnhsxbITa1HjKQVyIxEiWsZl8F_fsqjrxrkDzcR4yNK2rKi3jlOpEh466Z43vrNksN-0D3421sJ1saJO7bu8X6v7T8ic_EiIQ-hXq8MbVbWURYRTfxJI_evRI-IrUfhXBDBbdeC6QbtCWIzauxt_ja7C8Ivt_vmG0efRPpi61emf-8rNwRzsY2VftB1VSb52cKDI5fXvsJgv8aL21EDaufG2XNrGs2BMTiaUqCcY-v9GP64b6vUNRisf87sbgx9HUf-QJn80ex5l-3s5P7HJbjs-Kjy1n7pdgJlOdGpfC9m-y35hZizvGY7et6p7nrNcuvLVs2hS3sAtfeId-Vcry51nNmG-JrO2dljg0-K3pYvBX3Bhy6TOKQyZ3OXI-pwvkTRy8EPhwr81YeQN4PuWVZ8bLrWpQU6M8cGk0QgxlaRm2ToKL4fLP6_G0Kamy8HJHxuMg8NeQvMgoExn7wSLsWxjeF2G8AW0qwH2LBxSf6uVvmkZphlTrmW7W11dAD5AZGWZK0TLbHk6VPGQbwraoWR461l6-aKggJoJ2OqGG8qfzXNCd4KnprvtC-ymcvC99iCTQmX1csJAcU_LljA\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"admin\",\n            \"email\": \"admin@wearedesigners.net\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/logout",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 16:21:26 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 16:21:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"massage\": \"logout successfully\"\n}"
+				}
+			]
+		}
+	]
+}
