@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\StatusLiked;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('test', function () {
+	event(new StatusLiked('Admin'));
+	return "Event has been sent!";
 });
