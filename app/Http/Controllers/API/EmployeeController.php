@@ -50,7 +50,7 @@ class EmployeeController extends Controller
         try {
             $validatedData = $request->validated();
 
-            $validatedData['name'] =  $validatedData['first_name']; 
+            $validatedData['name'] =  $validatedData['first_name'];
             $user = $this->userInterface->store($validatedData);
 
             $validatedData['user_role'] = '';
@@ -110,6 +110,13 @@ class EmployeeController extends Controller
         DB::beginTransaction();
         try{
                 $details = $request->validated();
+                    if(Auth::user()->id == 1){
+                         $validatedData['status'] = 1;
+                         $validatedData['user_role'] = $validatedData['user_role'];
+                    }else{
+                        $validatedData['status'] = 0;
+                        $validatedData['user_role'] = '';
+                    }
                 $data = $this->employeeInterface->update($id, $details);
                 DB::commit();
 
