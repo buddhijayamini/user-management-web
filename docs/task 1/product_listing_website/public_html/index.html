@@ -1,0 +1,307 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Website </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .fakeimg {
+                height: 200px;
+                background: #aaa;
+            }
+            .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            .read {
+                background-color: white;
+                color: black;
+                border: 2px solid #555555;
+            }
+
+            body {
+                font-family: Arial;
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+        <div class="p-5 bg-white text-black text-center">
+            <div class="row">
+                <div class="col-sm-2">
+                    <i class="fa fa-truck">
+                    </i>  <label>Delivery Island wide</label>
+                </div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-6" style="float:right">
+                    <label>Support & Download</label> |  <label>Store location</label> | 
+
+                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                        Hello, Sign In
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><button class="btn btn-outline-danger">Sign In</button> <br/>
+                                New Customer ? <font style="color:blue">start here</font>
+                                <hr width="100%" />
+                            </a></li>
+                        <li><a class="dropdown-item" href="#">My Account</a></li>
+                        <li><a class="dropdown-item" href="#">My WishList</a></li>
+                        <li><a class="dropdown-item" href="#">My Orders</a></li>
+                        <li><a class="dropdown-item" href="#">Purchase History</a></li>
+                        <li><a class="dropdown-item" href="#">Saved Search</a></li>
+                        <li><a class="dropdown-item" href="#">Payment Option</a></li>
+                    </ul>
+                    <i class="fa fa-bell"></i> 
+                    <i class="fa fa-shopping-cart"><span class="badge rounded-pill bg-primary">0</span></i> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="img/logo.png" width="200" height="50" >
+                </div>
+                <div class="col-sm-6">
+                    <label style="float: left">Shop by category </label>
+                    <div class="searchBox" >
+                        <form action="#">
+                            <button>
+                                <i class="fa fa-search"
+                                   style="font-size: 18px;">
+                                </i>
+                            </button>
+                            <input type="text"
+                                   placeholder=" Search for anything..."
+                                   name="search"> 
+                            <select class="btn btn-primary dropdown-toggle">
+                                <option>All Category</option>
+                                <option>Category 01</option>
+                                <option>Category 02</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <button class="btn btn-primary">
+                        Search
+                    </button>
+                    <button class="btn btn-outline-danger">
+                        <i class="fa fa-phone">
+                        </i> Call me back
+                    </button>
+                </div>
+            </div>
+        </div>
+<!--<include src="./header.html"></include>-->
+
+        <nav class="navbar navbar-expand-sm bg-white">
+            <div class="container-fluid">
+                <ul class="navbar-nav" style="margin-left:30%">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" style="color:black"><u style="text-decoration-color: red">About US</u></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:black">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html" style="color:black">Deal Zone</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:black">News & Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:black">Contact US</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Carousel -->
+                <div id="demo" class="col-sm-12 carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/bg1.png" alt="featured" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/bg1.png" alt="seller" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/bg1.png" alt="special" class="d-block" style="width:100%">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="fakeimg">
+                        <img src="img/img1.png" class="d-block" style="width:100%;">
+                    </div>
+                </div>
+                <div class="col-sm-8" style="margin-top:80px">
+                    <h3>Refresh your Space</h3>
+                    <h5>Home store</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button class="button read">Read More</button>
+                </div>
+            </div> 
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#featured">Featured Items</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#seller">Best Seller</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#special">Special</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="featured" class="container tab-pane active"><br>  
+                            <center> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                            </center>
+                            <div class="product">
+                                <div class="product-content" style="float:left">
+                                    <a href="products.html"> <img src="img/headphone.png" width="250" height="250"> </a>
+                                    <h3>
+                                        Headphone
+                                    </h3>
+                                    <p class="product-text">HyperX cloud Alpha Headset</p>
+                                </div>
+
+                                <div class="product-content" style="float:left">
+                                    <a href="products.html">   <img src="img/mouse.png" width="250" height="250"></a>
+                                    <h3>
+                                        Mouse
+                                    </h3>
+                                    <p class="product-text">HyperX plusfire Surge</p>
+                                </div>
+                                <div class="product-content" style="float:left">
+                                    <a href="products.html">  <img src="img/jbl.png" width="250" height="250"></a>
+                                    <h3>
+                                        JBL
+                                    </h3>
+                                    <p class="product-text">JBL charger 3</p>
+                                </div>
+                                <div class="product-content" style="float:left">
+                                    <a href="products.html">  <img src="img/tv.png" width="250" height="250"> </a>
+                                    <h3>
+                                        Monitor
+                                    </h3>
+                                    <p class="product-text">Acer Gaming Monitor</p>
+                                </div>
+                            </div>              
+                        </div>
+                        <div id="seller" class="container tab-pane fade"><br>
+                            <center> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                            </center>  </div>
+                        <div id="special" class="container tab-pane fade"><br>
+                            <center> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                            </center>  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="img/bg2.png" style="width:100%">
+            </div></div>
+        <div class="row">
+            <div class="col-sm-12">
+                <center> 
+                    <h3>Frequently purchased Items</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br/> incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>     
+                </center> 
+                <div class="product" style="margin-left: 15%">
+                    <div class="product-content" style="float:left">
+                        <a href="products.html"> <img src="img/headphone.png" width="250" height="250"> </a>
+                        <h3>
+                            Headphone
+                        </h3>
+                        <p class="product-text">HyperX cloud Alpha Headset</p>
+                    </div>
+
+                    <div class="product-content" style="float:left">
+                        <a href="products.html">   <img src="img/mouse.png" width="250" height="250"></a>
+                        <h3>
+                            Mouse
+                        </h3>
+                        <p class="product-text">HyperX plusfire Surge</p>
+                    </div>
+                    <div class="product-content" style="float:left">
+                        <a href="products.html">  <img src="img/jbl.png" width="250" height="250"></a>
+                        <h3>
+                            JBL
+                        </h3>
+                        <p class="product-text">JBL charger 3</p>
+                    </div>
+                    <div class="product-content" style="float:left">
+                        <a href="products.html">  <img src="img/tv.png" width="250" height="250"> </a>
+                        <h3>
+                            Monitor
+                        </h3>
+                        <p class="product-text">Acer Gaming Monitor</p>
+                    </div>
+                </div>   
+            </div></div>
+        <div class="mt-5 p-4 bg-primary text-white text-center">
+            <div class="row">
+                <div class="col-sm-5" style="margin-left: 20px;">
+                    <img src="img/lg.png" width="200" height="60">
+                    <p style="float:left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,</p>     
+                    <div style="float:left">
+                        Privacy
+                    </div>
+                    <div style="float:right">
+                        Legal Agreement
+                    </div>
+                    <div style="padding-top: 130px">
+                        <p>All rights reserved Yamaha (pvt)ltd </p>
+                    </div>
+                </div>
+                <div class="col-sm-6" style="margin-left:20px">
+                    <h3>Our Newsletter</h3>
+                    <p style="float:left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,</p>     
+                    <button type="button" class="btn btn-outline-secondary"><font style="color:white">Enter your Email here &nbsp; <i class="fa fa-arrow-right"></i></font></button>
+                    <div style="padding-top: 60px; float: right">
+                        <p>Designed and Developed by <img src="img/lg2.png" width="20" height="20"/> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

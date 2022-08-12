@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Website </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+
+            body {
+                font-family: Arial;
+            }
+
+            /* The grid: Four equal columns that floats next to each other */
+            .cols {
+                float: left;
+                width: 25%;
+                padding: 10px;
+            }
+
+            /* Style the images inside the grid */
+            .cols img {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+
+            .cols img:hover {
+                opacity: 1;
+            }
+
+            /* Clear floats after the columns */
+            .rows:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            /* The expanding image container */
+            .conts {
+                position: relative;
+                display: none;
+            }
+
+            /* Closable button inside the expanded image */
+            .closebtn {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                color: white;
+                font-size: 35px;
+                cursor: pointer;
+            }
+
+            .btn1 {
+                border: 1px solid black;
+                color: black;
+                cursor: pointer;
+                border-radius: 50%;
+                height: 20px;
+                width: 20px;
+            }
+
+            .checked {
+                color: orange;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="p-5 bg-white text-black text-center">
+            <div class="row">
+                <div class="col-sm-2">
+                    <i class="fa fa-truck">
+                    </i>  <label>Delivery Island wide</label>
+                </div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-6" style="float:right">
+                    <label>Support & Download</label> |  <label>Store location</label> | 
+
+                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                        Hello, Sign In
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><button class="btn btn-outline-danger">Sign In</button> <br/>
+                                New Customer ? <font style="color:blue">start here</font>
+                                <hr width="100%" />
+                            </a></li>
+                        <li><a class="dropdown-item" href="#">My Account</a></li>
+                        <li><a class="dropdown-item" href="#">My WishList</a></li>
+                        <li><a class="dropdown-item" href="#">My Orders</a></li>
+                        <li><a class="dropdown-item" href="#">Purchase History</a></li>
+                        <li><a class="dropdown-item" href="#">Saved Search</a></li>
+                        <li><a class="dropdown-item" href="#">Payment Option</a></li>
+                    </ul>
+                    <i class="fa fa-bell"></i> 
+                    <i class="fa fa-shopping-cart"><span class="badge rounded-pill bg-primary">0</span></i> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="img/logo.png" width="200" height="50" >
+                </div>
+                <div class="col-sm-6">
+                    <label style="float: left">Shop by category </label>
+                    <div class="searchBox" >
+                        <form action="#">
+                            <button>
+                                <i class="fa fa-search"
+                                   style="font-size: 18px;">
+                                </i>
+                            </button>
+                            <input type="text"
+                                   placeholder=" Search for anything..."
+                                   name="search"> 
+                            <select class="btn btn-primary dropdown-toggle">
+                                <option>All Category</option>
+                                <option>Category 01</option>
+                                <option>Category 02</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <button class="btn btn-primary">
+                        Search
+                    </button>
+                    <button class="btn btn-outline-danger">
+                        <i class="fa fa-phone">
+                        </i> Call me back
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-sm bg-white">
+            <div class="container-fluid">
+                <ul class="navbar-nav" style="margin-left:30%">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" style="color:black">About US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:black">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html" style="color:black"><u style="text-decoration-color: red">Deal Zone </u></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:black">News & Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:black">Contact US</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container mt-5 row">       
+            <div class="col-sm-2">
+                <div class="row">
+                    <img id="one" src="img/lap.png" alt="lap" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="row">
+                    <img src="img/tv.png" alt="monitor" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="row">
+                    <img src="img/lap.png" alt="lap" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="row">
+                    <img src="img/tv.png" alt="monitor" style="width:100%" onclick="myFunction(this);">
+                </div>
+            </div>           
+            <div class="col-sm-4">
+                <span onclick="this.parentElement.style.display = 'none'" class="closebtn">&times;</span>
+                <img id="expandedImg" style="width:100%;">    
+            </div>
+            <div class="col-sm-6">
+                <p>laptop</p>
+                <h3 style="color:blue">Dell Inspiron 3580<span class="badge bg-warning">40% OFF</span></h3>
+                <p>213*456</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h5 style="color:blue">35,000 LKR</h5>
+                <p>Available Colors</p>
+                <hr height="10px"/>
+                <div style="float:left">
+                    <input type="button" class="btn1" style="background-color: orange; "/>
+                    <input type="button" class="btn1" style="background-color: red"/>
+                    <input type="button" class="btn1" style="background-color: black"/>
+                    <input type="button" class="btn1" style="background-color: gray"/>
+                </div>
+                <div style="float:right">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+
+                <div style="float:left; margin-top: 30px">
+                    <button class="btn">
+                        <i class="fa fa-heart-o">
+                        </i> 
+                    </button>
+                </div>
+                <div style="float:right; margin-top: 30px">
+                    <button class="btn btn-outline-danger">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#featured">Description</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#seller">Specification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#special">Comments</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="featured" class="container tab-pane active"><br>  
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                  <br/> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                  
+                    </div>
+                    <div id="seller" class="container tab-pane fade"><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                    </div>
+                    <div id="special" class="container tab-pane fade"><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col-sm-12">
+            <center> 
+                <h3>Products May You Like</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br/> incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>     
+            </center> 
+            <div class="product" style="margin-left: 15%">
+                <div class="product-content" style="float:left">
+                    <a href="products.html"> <img src="img/headphone.png" width="250" height="250"> </a>
+                    <h3>
+                        Headphone
+                    </h3>
+                    <p class="product-text">HyperX cloud Alpha Headset</p>
+                </div>
+
+                <div class="product-content" style="float:left">
+                    <a href="products.html">   <img src="img/mouse.png" width="250" height="250"></a>
+                    <h3>
+                        Mouse
+                    </h3>
+                    <p class="product-text">HyperX plusfire Surge</p>
+                </div>
+                <div class="product-content" style="float:left">
+                    <a href="products.html">  <img src="img/jbl.png" width="250" height="250"></a>
+                    <h3>
+                        JBL
+                    </h3>
+                    <p class="product-text">JBL charger 3</p>
+                </div>
+                <div class="product-content" style="float:left">
+                    <a href="products.html">  <img src="img/tv.png" width="250" height="250"> </a>
+                    <h3>
+                        Monitor
+                    </h3>
+                    <p class="product-text">Acer Gaming Monitor</p>
+                </div>
+            </div>   
+        </div></div>
+     <div class="row">
+        <div class="col-sm-12">
+            <img src="img/bg2.png" style="width:100%">
+        </div></div>
+    <div class="mt-5 p-4 bg-primary text-white text-center">
+        <div class="row">
+            <div class="col-sm-5" style="margin-left: 20px;">
+                <img src="img/lg.png" width="200" height="60">
+                <p style="float:left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,</p>     
+                <div style="float:left">
+                    Privacy
+                </div>
+                <div style="float:right">
+                    Legal Agreement
+                </div>
+                <div style="padding-top: 130px">
+                    <p>All rights reserved Yamaha (pvt)ltd </p>
+                </div>
+            </div>
+            <div class="col-sm-6" style="margin-left:20px">
+                <h3>Our Newsletter</h3>
+                <p style="float:left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,</p>     
+                <button type="button" class="btn btn-outline-secondary"><font style="color:white">Enter your Email here &nbsp; <i class="fa fa-arrow-right"></i></font></button>
+                <div style="padding-top: 60px; float: right">
+                    <p>Designed and Developed by <img src="img/lg2.png" width="20" height="20"/> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        expandImg.src = imgs.src;
+        expandImg.parentElement.style.display = "block";
+    }
+</script>
+</html>
